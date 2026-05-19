@@ -20,3 +20,28 @@ sudo systemctl restart nginx
 ```
 
 After the update process was completed, the website was tested through the public IP address to confirm that the Nginx web server was operating correctly and that the website remained publicly accessible.
+## DNS Configuration and Domain Integration
+
+A custom domain name was purchased through GoDaddy to improve the accessibility and professionalism of the cloud-hosted blogging platform.
+
+The domain was manually connected to the Microsoft Azure virtual machine using DNS records. An A record was created to point the domain to the Azure public IP address, while a CNAME record was configured for the www subdomain.
+
+### DNS Records Configured
+
+#### A Record
+- Type: A
+- Host/Name: @
+- Points to/Value: 20.5.17.115
+- TTL- 1/2 HOUR
+
+#### CNAME Record
+- Type: CNAME
+- Host/Name: www
+- Points to/Value: vaibhavblogs.com
+- TTL: 1/2 HOUR
+
+After DNS propagation, the website became accessible using the custom domain name:
+
+http://vaibhavblogs.com
+
+This process improved usability and prepared the server for future SSL/TLS HTTPS implementation.
