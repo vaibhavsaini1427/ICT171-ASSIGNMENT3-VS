@@ -39,9 +39,19 @@ The domain was manually connected to the Microsoft Azure virtual machine using D
 - Host/Name: www
 - Points to/Value: vaibhavblogs.com
 - TTL: 1/2 HOUR
+## SSL/TLS HTTPS Configuration
 
-After DNS propagation, the website became accessible using the custom domain name:
+SSL/TLS encryption was implemented using Let's Encrypt and Certbot to improve the security and accessibility of the cloud-hosted web server.
 
-http://vaibhavblogs.com
+The Certbot package for Nginx was installed on the Ubuntu virtual machine, and a trusted SSL certificate was generated for both the primary domain and the www subdomain.
 
-This process improved usability and prepared the server for future SSL/TLS HTTPS implementation.
+### Commands Used
+
+```bash
+sudo apt update
+sudo apt install certbot python3-certbot-nginx -y
+sudo certbot --nginx -d vaibhavblogs.com -d www.vaibhavblogs.com
+```
+
+After doing these steps the encrption was done
+https://vaibhavblogs.com
