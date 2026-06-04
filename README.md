@@ -114,4 +114,277 @@ http://20.5.17.115
 
 The default Nginx welcome page was displayed successfully, confirming that the web server was operating correctly.
 
+# WordPress Deployment and Configuration
+
+## Downloading WordPress
+
+The latest WordPress package was downloaded from the official website.
+
+```bash
+cd /tmp
+wget https://wordpress.org/latest.tar.gz
+```
+
+The package was extracted:
+
+```bash
+tar -xvzf latest.tar.gz
+```
+
+This created a WordPress directory containing all required website files.
+
+---
+
+## Backing Up Existing Website Files
+
+Before replacing the existing website, a backup was created.
+
+```bash
+sudo mkdir -p /home/vaibhavsaini/website-backup
+sudo cp -r /var/www/html/* /home/vaibhavsaini/website-backup/
+```
+
+This ensured that the original website could be restored if any issues occurred during deployment.
+
+---
+
+## Deploying WordPress Files
+
+The extracted WordPress files were copied to the Nginx web root directory.
+
+```bash
+sudo cp -r /tmp/wordpress/* /var/www/html/
+```
+
+Ownership and permissions were updated:
+
+```bash
+sudo chown -R www-data:www-data /var/www/html
+sudo find /var/www/html -type d -exec chmod 755 {} \;
+sudo find /var/www/html -type f -exec chmod 644 {} \;
+```
+
+Verification:
+
+```bash
+ls /var/www/html
+```
+
+The output confirmed that WordPress files such as wp-admin, wp-content and wp-includes were successfully deployed.
+
+---
+
+## Installing MariaDB
+
+WordPress requires a database to store website content, users, settings, and blog posts.
+
+MariaDB was installed:
+
+```bash
+sudo apt install mariadb-server -y
+```
+
+The database service was verified:
+
+```bash
+sudo systemctl status mariadb
+```
+
+The service was confirmed to be running successfully.
+
+---
+
+## Creating the WordPress Database
+
+MariaDB was accessed:
+
+```bash
+sudo mysql
+```
+
+A new database was created:
+
+```sql
+CREATE DATABASE wordpress;
+```
+
+A dedicated WordPress user account was created:
+
+```sql
+CREATE USER 'wpuser'@'localhost'
+IDENTIFIED BY 'StrongPassword123!';
+```
+
+Permissions were granted:
+
+```sql
+GRANT ALL PRIVILEGES
+ON wordpress.*
+TO 'wpuser'@'localhost';
+```
+
+Privileges were refreshed:
+
+```sql
+FLUSH PRIVILEGES;
+```
+
+The database was verified using:
+
+```sql
+SHOW DATABASES;
+```
+
+The newly created WordPress database appeared in the list.
+
+---
+
+## Installing PHP
+
+Since WordPress is a PHP-based application, PHP and PHP-FPM were required.
+
+Installation:
+
+```bash
+sudo apt install php-fpm php-mysql -y
+```
+
+Verification:
+
+```bash
+php -v
+```
+
+The server was running PHP 8.3.
+
+The PHP-FPM service was checked:
+
+```bash
+sudo systemctl status php8.3-fpm
+```
+
+The service was active and running successfully.
+
+---
+
+## Configuring WordPress
+
+The WordPress sample configuration file was copied:
+
+```bash
+sudo cp /var/www/html/wp-config-sample.php /var/www/html/wp-config.php
+```
+
+The configuration file was edited:
+
+```bash
+sudo nano /var/www/html/wp-config.php
+```
+
+Database details were entered:
+
+```php
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'wpuser');
+define('DB_PASSWORD', 'StrongPassword123!');
+define('DB_HOST', 'localhost');
+```
+
+Verification:
+
+```bash
+grep "DB_" /var/www/html/wp-config.php
+```
+
+The correct database credentials were displayed.
+
+---
+
+## Configuring Nginx for WordPress
+
+The Nginx default configuration file was edited:
+
+```bash
+sudo nano /etc/nginx/sites-enabled/default
+```
+
+The index order was updated:
+
+```nginx
+index index.php index.html index.htm;
+```
+
+The WordPress routing rule was added:
+
+```nginx
+location / {
+    try_files $uri $uri/ /index.php?$args;
+}
+```
+
+PHP processing support was enabled:
+
+```nginx
+location ~ \.php$ {
+    include snippets/fastcgi-php.conf;
+    fastcgi_pass unix:/run/php/php8.3-fpm.sock;
+}
+```
+
+---
+
+## Testing and Troubleshooting
+
+Configuration testing:
+
+```bash
+sudo nginx -t
+```
+
+Output:
+
+```text
+nginx: configuration file test is successful
+```
+
+Nginx was reloaded:
+
+```bash
+sudo systemctl reload nginx
+```
+
+Several checks were performed to ensure WordPress was functioning correctly:
+
+```bash
+curl -I https://vaibhavblogs.com
+```
+
+The response showed:
+
+```text
+Location: https://vaibhavblogs.com/wp-admin/install.php
+```
+
+This confirmed that WordPress was correctly communicating with the database and redirecting users to the installation wizard.
+
+---
+
+## Completing WordPress Installation
+
+The WordPress installation page was accessed through a web browser.
+
+The following information was configured:
+
+* Website Title
+* Administrator Username
+* Administrator Password
+* Administrator Email Address
+
+After installation, the WordPress dashboard became available.
+
+---
+
+## Result
+
+WordPress was successfully deployed on the Ubuntu server using Nginx, PHP 8.3, and MariaDB. The website became fully operational, allowing blog posts, pages, and website content to be managed through the WordPress administration dashboard.
 
