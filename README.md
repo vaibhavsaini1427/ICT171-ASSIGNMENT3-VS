@@ -110,7 +110,7 @@ The installation was verified by accessing the server through a web browser usin
 
 ```text
 http://20.5.17.115
-```
+
 
 The default Nginx welcome page was displayed successfully, confirming that the web server was operating correctly.
 
