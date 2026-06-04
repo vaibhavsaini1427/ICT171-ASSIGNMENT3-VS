@@ -55,3 +55,64 @@ sudo certbot --nginx -d vaibhavblogs.com -d www.vaibhavblogs.com
 
 After doing these steps the encrption was done
 https://vaibhavblogs.com
+
+## Microsoft Azure Virtual Machine Deployment
+
+A Linux virtual machine was deployed using Microsoft Azure Infrastructure as a Service (IaaS). The virtual machine serves as the hosting environment for this cloud server project.
+
+### Virtual Machine Configuration
+
+* **Cloud Provider:** Microsoft Azure
+* **Operating System:** Ubuntu Server
+* **Public IP Address:** 20.5.17.115
+
+The virtual machine was created through the Azure Portal and assigned a public IP address to allow remote administration and public access to hosted services.
+
+### Verification
+
+The successful deployment of the virtual machine was verified by connecting to the server using SSH from a local Windows computer.
+
+---
+
+## Ubuntu Server Configuration
+
+Ubuntu Server was selected as the operating system due to its stability, security, and widespread use in cloud environments.
+
+Remote administration was performed through SSH, allowing secure command-line access to the server.
+
+### SSH Connection Command
+
+```bash
+ssh -i "vsaini14711_key (1).pem" vaibhavsaini@20.5.17.115
+```
+
+### Verification
+
+Successful login to the Ubuntu server confirmed that network connectivity and remote administration were functioning correctly.
+
+---
+
+## Nginx Web Server Installation
+
+Nginx was selected as the web server software due to its performance, reliability, and popularity in modern web hosting environments.
+
+### Commands Used
+
+```bash
+sudo apt update
+
+sudo apt install nginx -y
+```
+
+### Verification
+
+The installation was verified by accessing the server through a web browser using the public IP address:
+
+```text
+http://20.5.17.115
+```
+
+The default Nginx welcome page was displayed successfully, confirming that the web server was operating correctly.
+
+```
+```
