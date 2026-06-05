@@ -31,8 +31,10 @@ A Linux virtual machine was deployed using Microsoft Azure Infrastructure as a S
 | Public IP Address | 20.5.17.115     |
 | Access Method     | SSH             |
 
+
 The virtual machine was created through the Azure Portal and assigned a public IP address to allow remote administration and public access to hosted services.
 
+![Azure VM Overview](images/Screenshot%202026-06-05%20210149.png)
 ### Verification
 
 The successful deployment of the virtual machine was verified by connecting to the server remotely using SSH from a Windows workstation.
