@@ -240,7 +240,7 @@ A dedicated WordPress user account was created:
 
 ```sql
 CREATE USER 'wpuser'@'localhost'
-IDENTIFIED BY 'StrongPassword123!';
+IDENTIFIED BY 'Password!';
 ```
 
 Permissions were granted:
@@ -314,7 +314,7 @@ Database details were entered:
 ```php
 define('DB_NAME', 'wordpress');
 define('DB_USER', 'wpuser');
-define('DB_PASSWORD', 'StrongPassword123!');
+define('DB_PASSWORD', 'Password!');
 define('DB_HOST', 'localhost');
 ```
 
@@ -536,7 +536,7 @@ DB_FILE="$BACKUP_DIR/db_backup_$DATE.sql"
 SITE_FILE="$BACKUP_DIR/site_backup_$DATE.tar.gz"
 
 # Create MariaDB database backup
-mysqldump -u wpuser -p'StrongPassword123!' wordpress > "$DB_FILE"
+mysqldump -u wpuser -p'Password!' wordpress > "$DB_FILE"
 DB_STATUS=$?
 
 # Create website file backup
