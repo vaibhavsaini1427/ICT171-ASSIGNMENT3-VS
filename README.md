@@ -107,7 +107,7 @@ The domain was manually connected to the Microsoft Azure virtual machine using D
 - Type: CNAME
 - Host/Name: www
 - Points to/Value: vaibhavblogs.com
-- TTL: 1/2 HOUR
+- TTL: 1 HOUR
 ![DNS Configuration Screenshot 2](images/Screenshot%202026-05-19%20120527.png)
 ### Verification
 
