@@ -628,13 +628,16 @@ https://vaibhavblogs.com/backup-report.html
 
 ## References
 
-- Microsoft Azure Documentation
-- Ubuntu Documentation
-- Nginx Documentation
-- MariaDB Documentation
-- PHP Documentation
-- WordPress Documentation
-- Certbot Documentation
+## References
+
+- Certbot. (2025). *Certbot: Automatically enable HTTPS with Let's Encrypt*. https://certbot.eff.org/
+- GitHub. (2025). *GitHub Documentation*. https://docs.github.com/
+- MariaDB Foundation. (2025). *MariaDB Server Documentation*. https://mariadb.com/kb/en/documentation/
+- Microsoft. (2025). *Azure Virtual Machines Documentation*. https://learn.microsoft.com/en-us/azure/virtual-machines/
+- Nginx, Inc. (2025). *NGINX Documentation*. https://nginx.org/en/docs/
+- The Linux Foundation. (2025). *Linux Documentation Project*. https://tldp.org/
+- Ubuntu. (2025). *Ubuntu Server Guide*. https://ubuntu.com/server/docs
+- WordPress Foundation. (2025). *WordPress Documentation*. https://wordpress.org/documentation/
 
 ## Conclusion
 
