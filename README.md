@@ -36,7 +36,24 @@ The virtual machine was created through the Azure Portal and assigned a public I
 
 The successful deployment of the virtual machine was verified by connecting to the server remotely using SSH from a Windows workstation.
 
+## Nginx Web Server Installation
 
+Nginx was selected as the web server software due to its high performance, reliability, and widespread use in modern web hosting environments. The web server is responsible for handling incoming HTTP and HTTPS requests and serving website content to users.
+
+### Commands Used
+
+```bash
+sudo apt update
+sudo apt install nginx -y
+```
+
+### Verification
+
+The installation was verified by accessing the server through a web browser using the public IP address:
+
+http://20.5.17.115
+
+The default Nginx welcome page was displayed successfully, confirming that the web server was operating correctly and accessible from the Internet.
 
 ## Security Maintenance and Vulnerability Patching
 
