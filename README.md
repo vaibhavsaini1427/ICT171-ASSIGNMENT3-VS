@@ -92,7 +92,7 @@ The domain was manually connected to the Microsoft Azure virtual machine using D
 
 DNS propagation was verified by successfully accessing the website through the custom domain name:
 
-https://vaibhavblogs.com
+
 
 The successful connection confirmed that the domain name was correctly resolving to the Azure virtual machine.
 ## SSL/TLS HTTPS Configuration
