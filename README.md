@@ -88,6 +88,13 @@ The domain was manually connected to the Microsoft Azure virtual machine using D
 - Host/Name: www
 - Points to/Value: vaibhavblogs.com
 - TTL: 1/2 HOUR
+### Verification
+
+DNS propagation was verified by successfully accessing the website through the custom domain name:
+
+https://vaibhavblogs.com
+
+The successful connection confirmed that the domain name was correctly resolving to the Azure virtual machine.
 ## SSL/TLS HTTPS Configuration
 
 SSL/TLS encryption was implemented using Let's Encrypt and Certbot to improve the security and accessibility of the cloud-hosted web server.
