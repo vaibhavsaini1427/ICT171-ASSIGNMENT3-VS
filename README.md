@@ -92,7 +92,7 @@ The domain was manually connected to the Microsoft Azure virtual machine using D
 
 DNS propagation was verified by successfully accessing the website through the custom domain name:
 
-
+https://vaibhavblogs.com
 
 The successful connection confirmed that the domain name was correctly resolving to the Azure virtual machine.
 ## SSL/TLS HTTPS Configuration
@@ -108,9 +108,18 @@ sudo apt update
 sudo apt install certbot python3-certbot-nginx -y
 sudo certbot --nginx -d vaibhavblogs.com -d www.vaibhavblogs.com
 ```
+### Verification
+
+The SSL certificate was successfully installed and HTTPS became active on the website.
+
+The secure connection was verified by accessing:
+
+https://vaibhavblogs.com
+
+A browser padlock icon confirmed that encrypted HTTPS communication was functioning correctly.
 
 After doing these steps the encrption was done
-https://vaibhavblogs.com
+
 
 ## Microsoft Azure Virtual Machine Deployment
 
