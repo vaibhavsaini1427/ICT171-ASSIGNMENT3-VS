@@ -17,6 +17,26 @@ A custom domain name (vaibhavblogs.com) was integrated using DNS records, and HT
 
 The project demonstrates cloud server deployment, web server administration, DNS management, SSL/TLS implementation, WordPress hosting, Linux system administration, and Bash scripting.
 
+## Microsoft Azure Virtual Machine Deployment
+
+A Linux virtual machine was deployed using Microsoft Azure Infrastructure as a Service (IaaS). The virtual machine provides the hosting environment for the cloud server project and serves as the foundation for all deployed services.
+
+### Virtual Machine Configuration
+
+| Component         | Configuration   |
+| ----------------- | --------------- |
+| Cloud Provider    | Microsoft Azure |
+| Operating System  | Ubuntu Server   |
+| Public IP Address | 20.5.17.115     |
+| Access Method     | SSH             |
+
+The virtual machine was created through the Azure Portal and assigned a public IP address to allow remote administration and public access to hosted services.
+
+### Verification
+
+The successful deployment of the virtual machine was verified by connecting to the server remotely using SSH from a Windows workstation.
+
+
 
 ## Security Maintenance and Vulnerability Patching
 
