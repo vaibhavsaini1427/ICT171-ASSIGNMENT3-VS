@@ -102,12 +102,13 @@ The domain was manually connected to the Microsoft Azure virtual machine using D
 - Host/Name: @
 - Points to/Value: 20.5.17.115
 - TTL- 1/2 HOUR
-
+![DNS Configuration Screenshot 1](images/Screenshot%202026-05-19%20120027.png)
 #### CNAME Record
 - Type: CNAME
 - Host/Name: www
 - Points to/Value: vaibhavblogs.com
 - TTL: 1/2 HOUR
+![DNS Configuration Screenshot 2](images/Screenshot%202026-05-19%20120527.png)
 ### Verification
 
 DNS propagation was verified by successfully accessing the website through the custom domain name:
