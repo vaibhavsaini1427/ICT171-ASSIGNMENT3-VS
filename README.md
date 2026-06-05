@@ -1,8 +1,15 @@
 # ICT171-ASSIGNMENT3-VS
-Name- Vaibhav Saini
-Student ID- 35819283
-Public IP Address- http://20.5.17.115/
-Domain name- https://vaibhavblogs.com/
+
+**Name:** Vaibhav Saini
+
+**Student ID:** 35819283
+
+**Public IP Address:** http://20.5.17.115/
+
+**Domain Name:** https://vaibhavblogs.com/
+
+
+
 ## Current Development Stage
 
 This project is currently in the initial planning and preparation stage. At this phase, the core project idea, server requirements, and implementation approach are being carefully planned and evaluated. Initial cloud server deployment and basic configuration have been completed to establish a foundation for future development.
