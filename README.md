@@ -412,6 +412,17 @@ After installation, the WordPress dashboard became available.
 
 ---
 
+### Verification
+
+The WordPress installation was successfully completed through the web-based installation wizard. The website became publicly accessible through the configured domain name and could be managed through the WordPress administration dashboard.
+
+Website URL:
+
+https://vaibhavblogs.com
+
+WordPress Dashboard:
+
+https://vaibhavblogs.com/wp-admin
 ## Result
 
 WordPress was successfully deployed on the Ubuntu server using Nginx, PHP 8.3, and MariaDB. The website became fully operational, allowing blog posts, pages, and website content to be managed through the WordPress administration dashboard.
