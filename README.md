@@ -9,12 +9,15 @@
 **Domain Name:** https://vaibhavblogs.com/
 
 
+## Project Overview
 
-## Current Development Stage
+The objective of this project was to design, deploy, and manage a cloud-hosted server environment using Microsoft Azure. An Ubuntu Linux virtual machine was configured to host a WordPress blogging platform using Nginx, PHP, and MariaDB.
 
-This project is currently in the initial planning and preparation stage. At this phase, the core project idea, server requirements, and implementation approach are being carefully planned and evaluated. Initial cloud server deployment and basic configuration have been completed to establish a foundation for future development.
+A custom domain name (vaibhavblogs.com) was integrated using DNS records, and HTTPS encryption was implemented using Let's Encrypt SSL/TLS certificates. In addition to the website deployment, a custom Bash script was developed to automate WordPress backups and generate a web-based server status report.
 
-Further research, testing, and dry-run implementations will be conducted before the final production setup is developed. Upcoming stages of the project will focus on improving the website structure, implementing additional server functionality, configuring DNS and SSL/TLS security, developing useful scripts, and progressively expanding the overall functionality and documentation of the system.
+The project demonstrates cloud server deployment, web server administration, DNS management, SSL/TLS implementation, WordPress hosting, Linux system administration, and Bash scripting.
+
+
 ## Security Maintenance and Vulnerability Patching
 
 A new CVE vulnerability affecting Nginx servers on Ubuntu systems was publicly disclosed. Since the cloud server is publicly accessible on the Internet, security maintenance and vulnerability patching are important responsibilities for system administrators.
