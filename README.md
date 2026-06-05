@@ -425,7 +425,7 @@ Website URL:
 https://vaibhavblogs.com
 
 WordPress Dashboard:
-![WordPress Dashboard](images/Screenshot%202026-06-05%20211350.png)
+
 https://vaibhavblogs.com/wp-admin
 ## Result
 
